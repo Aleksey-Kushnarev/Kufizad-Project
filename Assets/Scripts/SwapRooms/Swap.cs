@@ -27,11 +27,11 @@ public class Swap : MonoBehaviour
             {
                 case "Down":
                     SwitchArrows(false, true, false, false);
-                    Player.transform.position = new Vector2(0, Player.transform.position.y - 20);
+                    Player.transform.position = new Vector2(0, Player.transform.position.y - 15);
                     break;
                 case "Up":
                     SwitchArrows(false, false, false, true);
-                    Player.transform.position = new Vector2(0, Player.transform.position.y + 20);
+                    Player.transform.position = new Vector2(0, Player.transform.position.y + 15);
                     break;
                 case "Right":
                     SwitchArrows(true, false, false, false);
