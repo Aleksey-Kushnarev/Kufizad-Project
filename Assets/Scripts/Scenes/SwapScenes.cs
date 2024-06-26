@@ -9,6 +9,7 @@ public class SwapScenes : MonoBehaviour
     public void SceneLoad(string sceneName)    {
         SceneManager.LoadScene(sceneName);
         Debug.Log("Swap" + sceneName);
+        
     }
 }
 

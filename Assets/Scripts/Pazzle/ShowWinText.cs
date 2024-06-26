@@ -13,6 +13,7 @@ public class ShowWinText : MonoBehaviour
     public void ShowText()
     {
         showWinText = true;
+        PlayerPrefs.SetInt("isPazzleFinish", 1);
         animator.SetBool("isActivated", true);
     }
 
@@ -21,9 +22,23 @@ public class ShowWinText : MonoBehaviour
         
         if ((PlacedCount == countDetails) &&  !showWinText)
         {
-            Debug.Log(PlacedCount == countDetails);
+         
             ShowText();
         }
 
+    }
+
+    private void Start()
+    {
+        Debug.Log(PlayerPrefs.GetInt("isPazzleFinish") + " debud");
+        if (!PlayerPrefs.HasKey("isPazzleFinish"))
+        {
+            PlayerPrefs.SetInt("isPazzleFinish", 0);
+        }
+        else if (PlayerPrefs.GetInt("isPazzleFinish") == 1)
+        {
+            ShowText();
+            
+        }
     }
 }
